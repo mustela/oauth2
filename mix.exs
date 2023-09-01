@@ -38,7 +38,8 @@ defmodule OAuth2.Mixfile do
 
   defp deps do
     [
-      {:tesla, "~> 1.7"},
+      # TODO: Until this is merged https://github.com/elixir-tesla/tesla/pull/587/files
+      {:tesla, git: "https://github.com/mustela/tesla", branch: :updating_gun},
 
       # Test dependencies
       {:hackney, "~> 1.17", only: [:dev, :test]},
